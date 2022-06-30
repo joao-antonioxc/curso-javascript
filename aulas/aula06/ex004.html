@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazendo a aula 6 de Javascript</title>
+    <style>
+        body {
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Qual é o seu nome?')
+        document.write(`Olá <strong>${nome}</strong>! Seu nome tem ${nome.length} letras.<br>`)
+        document.write(`Seu nome escrito somente com letras maiúsculas fica: ${nome.toUpperCase()}.<br>`)
+        document.write(`E, seu nome somente com letras minúsculas fica: ${nome.toLowerCase()}.<br>`)
+        
+        /*
+        Contagem tamanho da string &var.length
+        Colocar tudo em maiúsculo: &var.toUpperCase()
+        Colocar tudo em letra minúscula: &var.toLowerCase()
+        */
+
+        // PARA FIXAR A VIRGULAR:
+        var valor = 1547.7
+        // variável pura
+        document.writeln(valor + '<br>')
+        // variável com duas casas decimais
+        document.writeln(valor.toFixed(2) + '<br>')
+        // variável trocando o ponto pela vírgula
+        document.writeln(valor.toFixed(2).replace('.', ',') + '<br>')
+        // variável com cifrão de moeda
+        document.writeln(valor.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) + '<br>')
+    </script>
+</body>
+</html>
