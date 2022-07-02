@@ -24,8 +24,15 @@
     <hr>
     <h2>Eventos DOM</h2>
     <p></p>
-    <div id="area">
+    <div  id="area">
         Interaja...
     </div>
+    <script>
+        const area = document.getElementById('div#area');
+        area.addEventListener('click', clicou);
+        function clicou() {
+            area.innerText = 'Clicou...';
+        }
+    </script>
 </body>
 </html>
