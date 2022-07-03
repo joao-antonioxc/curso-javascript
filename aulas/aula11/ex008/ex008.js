@@ -6,8 +6,7 @@ function medir() {
 
     if (velocidade > 66) {
         medicao.style.color = 'red'
-        medicao.innerHTML =
-        `A medição realizada foi de ${velocidade}.<br>
+        medicao.innerHTML = `A medição realizada foi de ${velocidade}.<br>
         O valor considerado é de ${velocidade - (velocidade * 10 / 100)}.<br>
         Nesta velocidade você foi multado por excesso de velocidade!`
     } else {
