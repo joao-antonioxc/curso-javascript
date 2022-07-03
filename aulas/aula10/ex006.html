@@ -9,13 +9,14 @@
         body {
             font: normal 16pt Arial;
         }
-        div#area {
+        div {
             background-color: darkgreen;
             color: white;
             width: 200px;
             height: 200px;
             line-height: 200px;
             text-align: center;
+            margin: 40px;
         }
     </style>
 </head>
@@ -28,10 +29,21 @@
         Interaja...
     </div>
     <script>
-        const area = document.getElementById('div#area');
+        const area = document.querySelector('#area')
         area.addEventListener('click', clicou);
+        area.addEventListener('mouseenter', entrou);
+        area.addEventListener('mouseleave', saiu);
         function clicou() {
-            area.innerText = 'Clicou...';
+            area.innerHTML = 'Clicou...'
+            area.style.background = 'lightblue'
+        }
+        function entrou() {
+            area.innerHTML = 'Entrou...'
+            area.style.background = 'lightgreen'
+        }
+        function saiu() {
+            area.innerHTML = 'Saiu...'
+            area.style.background = 'darkblue'
         }
     </script>
 </body>

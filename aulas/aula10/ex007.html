@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10 - ex007 {DOM}</title>
+    <style>
+        body {
+            font: normal 16px Arial;
+        }
+        input {
+            width: 100px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Números</h1>
+    <hr>
+    <input type="number" id="num1"><strong>+</strong>
+    <input type="number" id="num2">
+    <input type="button" value="Somar" id="soma">
+    <p id="resultado">Resultado: </p>
+    <script>
+        document.querySelector('#soma').addEventListener('click',() => {
+            const num1 = Number(document.querySelector('#num1').value)
+            const num2 = Number(document.querySelector('#num2').value)
+            document.querySelector('#resultado').innerHTML = `Resultado: A soma de ${num1} e ${num2}, é igual a <strong>${num1 + num2}</strong>.`
+        })
+    </script>
+</body>
+</html>
