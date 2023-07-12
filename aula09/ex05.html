@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula09 Ex05</title>
+    <style>
+        body {
+            background-color: darkslateblue;
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando os estudos com DOM</h1>
+    <p>Aqui vai o <strong>resultado</strong></p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid aspernatur assumenda commodi culpa cumque debitis dolorem eveniet fugit harum hic itaque odit omnis placeat provident quas, quasi recusandae voluptatum?</p>
+    <div>Clique em mim</div>
+    <div id="msg">Clique em mim</div>
+    <br>
+    <script>
+        window.document.writeln('Olá, mundo!')
+        window.document.writeln(window.document.URL)
+        var p1 = document.getElementsByTagName('p')[0]
+        window.document.writeln(p1.innerText + '<br>')
+        window.document.writeln(p1.innerHTML)
+        // var msgdiv = document.getElementById('msg')
+        // msgdiv.style.backgroundColor = 'green'
+        var divmsg = document.querySelector('div#msg')
+        divmsg.style.backgroundColor = 'darkblue'
+    </script>
+</body>
+</html>
